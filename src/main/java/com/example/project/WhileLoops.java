@@ -141,7 +141,16 @@ public class WhileLoops {
     */
    public static int minutesUntilDead(int startPercent, int perMinuteUse) {
        //YOUR CODE HERE
-       return -1;
+        if (startPercent <= 0 || perMinuteUse <= 0) {
+            return 0;
+        }
+       while (startPercent > 0) {
+        startPercent--;
+        perMinuteUse++;
+
+       }
+       return perMinuteUse;
+
    }
 }
 
